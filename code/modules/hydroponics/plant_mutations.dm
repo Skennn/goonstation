@@ -235,6 +235,11 @@
 	chance = 10
 	assoc_reagents = list("ghostchilijuice")
 
+/datum/plantmutation/chili/green
+	name = "Green Chili"
+	iconmod = "ChiliGreen"
+	crop = /obj/item/reagent_containers/food/snacks/plant/chili/green
+
 // Eggplant Mutations
 
 /datum/plantmutation/eggplant/literal

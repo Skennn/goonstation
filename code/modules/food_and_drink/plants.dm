@@ -614,6 +614,12 @@ ABSTRACT_TYPE(/obj/item/reagent/containers/food/snacks/plant)
 		var/datum/plantgenes/DNA = src.plantgenes
 		reagents.add_reagent("capsaicin", DNA.potency)
 
+/obj/item/reagent_containers/food/snacks/plant/chili/green
+	name = "green chili pepper"
+	crop_prefix = "green "
+	desc = "It's green."
+	icon_state = "green_chili"
+
 /obj/item/reagent_containers/food/snacks/plant/chili/chilly
 	name = "chilly pepper"
 	crop_prefix = "chilly "

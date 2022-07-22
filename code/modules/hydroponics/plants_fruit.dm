@@ -117,7 +117,7 @@ ABSTRACT_TYPE(/datum/plant/fruit)
 	endurance = 3
 	genome = 17
 	assoc_reagents = list("capsaicin")
-	mutations = list(/datum/plantmutation/chili/chilly,/datum/plantmutation/chili/ghost)
+	mutations = list(/datum/plantmutation/chili/chilly,/datum/plantmutation/chili/ghost,/datum/plantmutation/chili/green)
 	commuts = list(/datum/plant_gene_strain/immunity_toxin,/datum/plant_gene_strain/growth_slow)
 
 	HYPinfusionP(var/obj/item/seed/S,var/reagent)
