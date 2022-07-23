@@ -957,3 +957,9 @@ obj/item/reagent_containers/food/snacks/ingredient/pepperoni_log
 	initial_volume = 15
 	initial_reagents = list("mercury"=1,"LSD"=1,"ethanol"=1,"gcheese"=1)
 	food_effects = list("food_sweaty","food_bad_breath")
+
+/obj/item/reagent_containers/food/snacks/ingredient/raw_couscous
+	name = "raw couscous"
+	desc = "Fine couscous grains."
+	icon_state = "raw_couscous"
+	heal_amt = 1

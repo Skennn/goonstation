@@ -2892,3 +2892,23 @@ ABSTRACT_TYPE(/obj/item/reagent_containers/food/snacks/soup)
 	initial_volume = 20
 	initial_reagents = "currypowder"
 	food_effects = list("food_hp_up","food_refreshed","food_warm")
+
+
+/obj/item/reagent_containers/food/snacks/shakshuka
+	name = "shakshuka"
+	desc = "A plate of mediterranean shakshuka, smells delicious."
+	icon = 'icons/obj/foodNdrink/food_meals.dmi'
+	icon_state = "shakshuka"
+	heal_amt = 3
+	bites_left = 3
+	food_effects = list("food_hp_up","food_warm")
+
+/obj/item/reagent_containers/food/snacks/couscous
+	name = "couscous"
+	desc = "A satiating plate of couscous with some vegetables on top, pretty!."
+	icon = 'icons/obj/foodNdrink/food_meals.dmi'
+	icon_state = "couscous"
+	needfork = TRUE
+	heal_amt = 3
+	bites_left = 5
+	food_effects = list("food_hp_up","food_warm")

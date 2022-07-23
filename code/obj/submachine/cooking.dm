@@ -410,6 +410,8 @@ table#cooktime a#start {
 			src.recipes += new /datum/cookingrecipe/chickenpineapplecurry(src)
 			src.recipes += new /datum/cookingrecipe/tandoorichicken(src)
 			src.recipes += new /datum/cookingrecipe/potatocurry(src)
+			src.recipes += new /datum/cookingrecipe/shakshuka
+			src.recipes += new /datum/cookingrecipe/couscous
 			src.recipes += new /datum/cookingrecipe/onionchips(src)
 			src.recipes += new /datum/cookingrecipe/mint_chutney(src)
 			src.recipes += new /datum/cookingrecipe/refried_beans(src)
@@ -1008,6 +1010,9 @@ table#cooktime a#start {
 					qdel( P )
 				if (/obj/item/plant/herb/tea)
 					new/obj/item/reagent_containers/food/snacks/condiment/matcha(src.loc)
+					qdel( P )
+				if (/obj/item/reagent_containers/food/snacks/ingredient/dough/semolina)
+					new/obj/item/reagent_containers/food/snacks/ingredient/raw_couscous(src.loc)
 					qdel( P )
 		// Wind down
 		for(var/obj/item/S in src.contents)
