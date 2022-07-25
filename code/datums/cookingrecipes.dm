@@ -1572,6 +1572,19 @@ ABSTRACT_TYPE(/datum/cookingrecipe)
 
 		return null
 
+//muffins!
+/datum/cookingrecipe/muffin_batter
+	item1 = /obj/item/reagent_containers/food/snacks/ingredient/flour
+	item2 = /obj/item/reagent_containers/food/snacks/ingredient/egg
+	item3 = /obj/item/reagent_containers/food/drinks/milk
+	item4 = /obj/item/reagent_containers/food/snacks/ingredient/sugar
+	cookbonus = 10
+	output = /obj/item/reagent_containers/food/snacks/muffin_batter
+
+/datum/cookingrecipe/muffins
+	item1 = /obj/item/reagent_containers/food/snacks/muffin_pan1
+	cookbonus = 10
+	output = /obj/item/reagent_containers/food/snacks/muffin_pan2
 
 /datum/cookingrecipe/omelette
 	item1 = /obj/item/reagent_containers/food/snacks/ingredient/egg

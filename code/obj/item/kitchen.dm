@@ -35,6 +35,21 @@ TRAYS
 	desc = "A hollowed out tube, to save on weight, used to roll dough flat in order to make various edible objects."
 	stamina_damage = 10
 	stamina_cost = 10
+/obj/item/kitchen/muffin_pan
+	name = "muffin pan"
+	desc = "It's a nonstick muffin pan for 4 muffins!."
+	icon = 'icons/obj/foodNdrink/cupcakes.dmi'
+	icon_state = "muffin_pan"
+
+	attackby(obj/item/W, mob/user)
+		if (istype(W, /obj/item/reagent_containers/food/snacks/muffin_batter))
+			boutput(user, "<span class='notice'>You pour the batter in the muffin pan.</span>")
+			var/obj/item/reagent_containers/food/snacks/muffin_pan1/D=new /obj/item/reagent_containers/food/snacks/muffin_pan1(W.loc)
+			user.u_equip(W)
+			user.put_in_hand_or_drop(D)
+			qdel(W)
+			qdel(src)
+		else ..()
 
 /obj/item/kitchen/utensil
 	inhand_image_icon = 'icons/mob/inhand/hand_food.dmi'
