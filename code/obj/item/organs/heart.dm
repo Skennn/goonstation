@@ -10,7 +10,8 @@
 	desc = "Offal, just offal."
 	organ_holder_name = "heart"
 	organ_holder_location = "chest"
-	organ_holder_required_op_stage = 9.0
+	organ_holder_required_op_stage = 9
+	icon = 'icons/obj/items/organs/heart.dmi'
 	icon_state = "heart"
 	item_state = "heart"
 	// var/broken = 0		//Might still want this. As like a "dead organ var", maybe not needed at all tho?
@@ -41,7 +42,7 @@
 
 		if (!ON_COOLDOWN(src, "heart_wring", 2 SECONDS))
 			playsound(user, squeeze_sound, 30, 1)
-			logTheThing("combat", user, null, "wrings out [src] containing [log_reagents(src)] at [log_loc(user)].")
+			logTheThing(LOG_CHEMISTRY, user, "wrings out [src] containing [log_reagents(src)] at [log_loc(user)].")
 			src.reagents.trans_to(get_turf(src), HEART_WRING_AMOUNT)
 			boutput(user, "<span class='notice'>You wring out \the [src].</span>")
 
@@ -132,6 +133,9 @@
 		..()
 		src.icon_state = pick("plant_heart", "plant_heart_bloom")
 
+TYPEINFO(/obj/item/organ/heart/cyber)
+	mats = 8
+
 /obj/item/organ/heart/cyber
 	name = "cyberheart"
 	desc = "A cybernetic heart. Is this thing really medical-grade?"
@@ -141,7 +145,6 @@
 	edible = 0
 	robotic = 1
 	created_decal = /obj/decal/cleanable/oil
-	mats = 8
 	made_from = "pharosium"
 	transplant_XP = 7
 	squeeze_sound = 'sound/voice/screams/Robot_Scream_2.ogg'
