@@ -89,3 +89,29 @@
 		else
 			. = ..()
 
+	attackby(obj/item/W, mob/user)
+		if (istype(W, /obj/item/reagent_containers/food/snacks/plant/strawberry))
+			user.u_equip(W)
+			qdel(W)
+			src.UpdateOverlays(src.SafeGetOverlayImage('icons/obj/foodNdrink/cupcakes.dmi', "strawberry", src.layer + 0.1), "strawberry")
+		else
+			. = ..()
+
+	attackby(obj/item/W, mob/user)
+		if (istype(W, /obj/item/reagent_containers/food/snacks/plant/cherry))
+			user.u_equip(W)
+			qdel(W)
+			src.UpdateOverlays(src.SafeGetOverlayImage('icons/obj/foodNdrink/cupcakes.dmi', "cherry", src.layer + 0.1), "cherry")
+		else
+			. = ..()
+
+	attackby(obj/item/W, mob/user)
+		if (istype(W, /obj/item/reagent_containers/food/snacks/plant/blueberry))
+			user.u_equip(W)
+			qdel(W)
+			src.UpdateOverlays(src.SafeGetOverlayImage('icons/obj/foodNdrink/cupcakes.dmi', "blueberry", src.layer + 0.1), "blueberry")
+		else
+			. = ..()
+
+
+
